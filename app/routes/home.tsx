@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import Navbar from "../components/Navbar";
 import { resumes } from "../../constants";
+import ResumeCard from "../components/ResumeCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -22,7 +23,7 @@ export default function Home() {
 
       {resumes.map((resume) => (
         <div>
-          <h1>{resume.jobTitle}</h1>
+          <ResumeCard />
         </div>
       ))}
     </main>
